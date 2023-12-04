@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcolo del prezzo del biglietto del treno</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div>
+        <h1>
+            calcola il prezzo del tuo biglietto
+        </h1>
+        <div>
+            <form action="">
+                <div>
+                    <label for="fnameandSname">Nome e Cognome</label><br>
+                    <input type="text" id="fnameandSname" name="fnameandSname"/> 
+                </div> 
+                <div>
+                    <label for="kilometres">Km da percorrere</label><br>
+                    <input type="kilometres" id="kilometres" name="kilometres"/>
+                </div>
+                <div>
+                    <legend>Fascia d'età</legend>
+                    <select name="age">
+                    <option id="ageAdult" value="#" selected="selected">Maggiorenne</option>
+                    <option id="ageYunger" value="#">Minorenne</option>
+                    <option id="ageOld" value="#">Over 65</option>
+                    </select>
+                </div> 
+                <div>
+                    <button type="button" id="buttonGenerate" value="generate" >Genera</button>
+                    <button type="button" id="buttonReset" value="reset">Annulla</button>
+                </div>
+            </form>
+        </div>
+        <h2>
+
+        </h2>
+        <div>
+            <div id="trainticket">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
