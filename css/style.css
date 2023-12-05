@@ -12,6 +12,7 @@
 
 .bg_color_container{
     background-color: #B91450;
+    height: 100vh;
 }
 
 .form_container> form > div{
@@ -34,4 +35,9 @@
 
 .border_second_ticket{
     border: 2px solid #808080;
+}
+
+.btn{
+    background-color: lightgrey;
+    border: 1 px solis #B91350;
 }

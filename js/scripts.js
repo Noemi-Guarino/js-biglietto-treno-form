@@ -31,27 +31,40 @@ btnGenerate.addEventListener ("click",
         let tax = 0.21
         let totalPrice = (kilometres * tax);
         let discount = 0;
+        let discountType;
 
 
         if ( age == ageYunger ) {
             discount = ((totalPrice *  20) / 100);   
             console.log("sconto",discount, typeof discount);
+            discountType = "Biglietto Young"
         }
             
         else if ( age == ageOld ) {
             discount = ((totalPrice *  40) / 100);
             console.log("sconto",discount, typeof discount);
+            discountType = "Biglietto Over"
         }  
 
         else{
             discount = 0;
             console.log("sconto",discount, typeof discount);
-            // totalPrice = (kilometres * tax);
-            // console.log("totalPrice", typeof totalPrice);
+            discountType = "Biglietto Standard"
         }
 
         let price = (totalPrice - discount);
         const finalPrice = (price.toFixed(2))
         document.getElementById("trainticket").innerHTML = finalPrice + "€";
+        document.getElementById("discounttype").innerHTML = discountType;
+
+        let traincarriage = Math.floor(Math.random() * 9 );
+        console.log("numero di carrozza:", traincarriage);
+        document.getElementById("traincarriage").innerHTML = traincarriage;
+
+        let codex = Math.floor(Math.random() * 9 );
+        console.log("numero di codice:", codex);
+        document.getElementById("codex").innerHTML = codex;
+
+
     }
 )
