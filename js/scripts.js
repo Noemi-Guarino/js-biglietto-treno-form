@@ -13,8 +13,8 @@
 // Nota:
 // Se non vi sentite particolarmente creativi, questa potrebbe essere un'implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 
-let buttonbuttonGenerateGenera = document.getElementById('buttonGenerate');
-buttonGenerate.addEventListener ( 'click',
+let buttonbuttonGenerate = document.getElementById('buttonGenerate');
+buttonGenerate.addEventListener ("click",
 function() {
 
 let fnameandSname = document.getElementById('fnameandSname');
