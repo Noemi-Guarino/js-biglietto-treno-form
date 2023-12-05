@@ -22,10 +22,11 @@ btnGenerate.addEventListener ("click",
 
         let kilometres = document.getElementById('kilometres');
         console.log('kilometres', kilometres, typeof kilometres.value);
+        kilometres = parseInt(kilometres.value)
 
-        let age= document.getElementById('age');
-        // let ageValue = parseInt(age.value);
+        let age = document.getElementById('age');
         console.log('age', age, typeof age);
+        age = parseInt(age.value)
 
         let tax = 0.21
         let totalPrice = (kilometres * tax);
@@ -45,8 +46,8 @@ btnGenerate.addEventListener ("click",
         else{
             discount = 0;
             console.log("sconto",discount, typeof discount);
-            totalPrice = (kilometres * tax);
-            console.log("totalPrice",price, typeof totalPrice);
+            // totalPrice = (kilometres * tax);
+            // console.log("totalPrice", typeof totalPrice);
         }
 
         let price = (totalPrice - discount);
