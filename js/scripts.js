@@ -13,45 +13,44 @@
 // Nota:
 // Se non vi sentite particolarmente creativi, questa potrebbe essere un'implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 
-let buttonGenerate = document.getElementById('generate');
-buttonGenerate.addEventListener ('click',
-    function() {
+let btnGenerate = document.getElementById("generate");
+btnGenerate.addEventListener ("click", 
+    function (){
 
-    let fnameandSname = document.getElementById('fnameandSname');
-    console.log('fnameandSname',fnameandSname, typeof fnameandSname.value);
+        let fnameandSname = document.getElementById('fnameandSname');
+        console.log('fnameandSname',fnameandSname, typeof fnameandSname.value);
 
-    let kilometres = document.getElementById('kilometres');
-    console.log('kilometres', kilometres, typeof kilometres.value);
+        let kilometres = document.getElementById('kilometres');
+        console.log('kilometres', kilometres, typeof kilometres.value);
 
-    let age= document.getElementById('age');
-    let ageValue = parseInt(age.value);
-    console.log('age', age, typeof age);
+        let age= document.getElementById('age');
+        // let ageValue = parseInt(age.value);
+        console.log('age', age, typeof age);
 
-    let tax = 0.21
-    let totalPrice = (kilometres * tax);
-    let discount = 0;
+        let tax = 0.21
+        let totalPrice = (kilometres * tax);
+        let discount = 0;
 
 
-    if ( age == ageYunger ) {
-        discount = ((totalPrice *  20) / 100);   
-        console.log("sconto",discount, typeof discount);
+        if ( age == ageYunger ) {
+            discount = ((totalPrice *  20) / 100);   
+            console.log("sconto",discount, typeof discount);
+        }
+            
+        else if ( age == ageOld ) {
+            discount = ((totalPrice *  40) / 100);
+            console.log("sconto",discount, typeof discount);
+        }  
+
+        else{
+            discount = 0;
+            console.log("sconto",discount, typeof discount);
+            totalPrice = (kilometres * tax);
+            console.log("totalPrice",price, typeof totalPrice);
+        }
+
+        let price = (totalPrice - discount);
+        const finalPrice = (price.toFixed(2))
+        document.getElementById("trainticket").innerHTML = finalPrice + "€";
     }
-        
-    else if ( age == ageOld ) {
-        discount = ((totalPrice *  40) / 100);
-        console.log("sconto",discount, typeof discount);
-    }  
-
-    else{
-        discount = 0;
-        console.log("sconto",discount, typeof discount);
-        totalPrice = (kilometres * tax);
-        console.log("totalPrice",price, typeof totalPrice);
-    }
-
-    let price = (totalPrice - discount);
-    const finalPrice = (price.toFixed(2))
-    console.log("discount", discount);
-    console.log("totalPrice", finalPrice);
-    console.log("FinalPrice", finalPrice);
-}
+)
