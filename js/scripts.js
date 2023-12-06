@@ -38,15 +38,11 @@ btnGenerate.addEventListener ("click",
             discount = ((totalPrice *  20) / 100);   
             console.log("sconto",discount, typeof discount);
             discountType = "Biglietto Young"
-        }
-            
-        else if ( age == ageOld ) {
+        } else if ( age == ageOld ) {
             discount = ((totalPrice *  40) / 100);
             console.log("sconto",discount, typeof discount);
             discountType = "Biglietto Over"
-        }  
-
-        else{
+        } else{
             discount = 0;
             console.log("sconto",discount, typeof discount);
             discountType = "Biglietto Standard"
